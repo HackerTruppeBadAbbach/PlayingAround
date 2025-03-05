@@ -30,14 +30,11 @@ public class Schueler {
         if (naechsterGeburtstag.isBefore(heute) || naechsterGeburtstag.equals(heute)) {
             naechsterGeburtstag = naechsterGeburtstag.plusYears(1);
         }
-
         // Tage bis zum nächsten Geburtstag berechnen
         long tageBisNaechsterGeburtstag = ChronoUnit.DAYS.between(heute, naechsterGeburtstag);
 
         // Ausgabe
-        System.out.println("Alter: " + alter + " Jahre");
+        System.out.println(getName()+" du bist " + alter + " Jahre jung");
         System.out.println("Tage bis zum nächsten Geburtstag: " + tageBisNaechsterGeburtstag + " Tage");
-
     }
-
 }
